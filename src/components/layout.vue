@@ -7,7 +7,7 @@
 
       <div>
         <ul>
-          <li v-for="u in username">{{u.username}}</li>
+          <li>{{username}}</li>
           <li v-if="username!== ''">|</li>
           <li v-if="username=== ''" @click="Click">登录</li>
         </ul>
@@ -77,8 +77,9 @@ export default {
     },
     onSuccessLog(data) {
       this.closeDialog();
-      this.username = data.data;
-      //        console.log(this.username)
+      this.username = sessionStorage.username;
+      console.log("1" + this.username);
+      console.log(sessionStorage.username);
     },
 
     //axios获取本地jsonTest
@@ -150,6 +151,13 @@ export default {
         .catch(function(error) {
           console.log("error" + error);
         });
+    }
+  },
+  created:function(){
+    if(sessionStorage.username) {
+      this.username = sessionStorage.username;
+      console.log(sessionStorage.username);
+      console.log(this.username);
     }
   }
 };

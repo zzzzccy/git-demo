@@ -171,7 +171,7 @@ export default {
     min-height: 125px;
     padding-left: 120px;
   }
-  .inner-border-car  .index-board-item-inner {
+  /* .inner-border-car  .index-board-item-inner {
     background: url('../assets/images/1.png') no-repeat;
   }
   .inner-border-earth  .index-board-item-inner {
@@ -182,6 +182,6 @@ export default {
   }
   .inner-border-mouten  .index-board-item-inner {
     background: url('../assets/images/4.png') no-repeat;
-  }
+  } */
 
 </style>

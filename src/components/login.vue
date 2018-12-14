@@ -79,6 +79,7 @@
           this.errorText = ''
           this.$http.get('api/login')
             .then((response) => {
+              sessionStorage.username = this.usernameModel;
               this.$emit('has-log', response.body)
               console.log(response.body)
             }, (error) => {
